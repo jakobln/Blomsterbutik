@@ -22,9 +22,11 @@ namespace Blomsterbutik
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public BlomstViewModel ViewModel { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
+            ViewModel = new BlomstViewModel();
         }
     }
 }

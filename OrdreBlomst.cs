@@ -8,25 +8,37 @@ namespace Blomsterbutik
 {
     public class OrdreBlomst
     {
-        private string _navn;
-        private int _antal;
-        private string _farve;
+        private string navn;
+        private int antal;
+        private string farve;
 
         public string Navn 
         {
-            get { return _navn; }
-            set { _navn = value; } 
+            get { return navn; }
+            set { navn = value; } 
         }
 
         public int Antal 
         {
-            get { return _antal; }
-            set { _antal = value; }
+            get { return antal; }
+            set { antal = value; }
         }
         public string Farve 
         {
-            get { return _farve; }
-            set { _farve = value; }
+            get { return farve; }
+            set { farve = value; }
+        }
+
+        public OrdreBlomst(string navn, int antal, string farve)
+        {
+            this.Navn = navn;
+            this.Antal = antal;
+            this.Farve = farve;
+        }
+
+        public OrdreBlomst()
+        {
+
         }
     }
 }
