@@ -9,13 +9,13 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView x:ConnectionId='2'                                              HorizontalAlignment="Left" Height="375" Margin="502,146,0,0" VerticalAlignment="Top" Width="291">
+        <ListView x:ConnectionId='2'                                                                                                                 HorizontalAlignment="Left" Height="375" Margin="502,146,0,0" VerticalAlignment="Top" Width="291">
             <ListView.ItemTemplate>
                 <DataTemplate                               >
-                    <StackPanel x:ConnectionId='8' Orientation="Horizontal">
-                        <TextBox x:ConnectionId='9'                                  />
-                        <TextBlock x:ConnectionId='10'                                   />
+                    <StackPanel x:ConnectionId='9' Orientation="Horizontal">
+                        <TextBox x:ConnectionId='10'                                  />
                         <TextBlock x:ConnectionId='11'                                   />
+                        <TextBlock x:ConnectionId='12'                                   />
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -24,6 +24,7 @@
         <TextBox x:ConnectionId='4' HorizontalAlignment="Left" Margin="216,500,0,0" Description="Antal"                                                         TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox x:ConnectionId='5' HorizontalAlignment="Left" Margin="301,500,0,0" Description="Farve"                                                         TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button x:ConnectionId='6'                                                      Content="Tilføj Blomst" Height="47" Margin="120,582,0,0" VerticalAlignment="Top" Width="110"/>
+        <Button x:ConnectionId='7'                                                              Content="Slet Blomst" Margin="120,679,0,0" VerticalAlignment="Top" Height="50" Width="128"/>
     </Grid>
 </Page>
 

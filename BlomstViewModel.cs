@@ -20,7 +20,11 @@ namespace Blomsterbutik
         public int AntalBlomst { get => antalBlomst; set => antalBlomst = value; }
         public string FarveBlomst { get => farveBlomst; set => farveBlomst = value; }
 
+        public OrdreBlomst SelectedOrdreBlomst { get; set; }
+
         public RelayCommand AddNyBlomst { get; set; }
+
+        public RelayCommand SletSelectedBlomst { get; set; }
 
         public BlomstViewModel()
         {
@@ -31,6 +35,8 @@ namespace Blomsterbutik
             OC_Blomster.Add(new OrdreBlomst("Tulipan", 2, "Gul"));
 
             AddNyBlomst = new RelayCommand(AddBlomst);
+            SletSelectedBlomst = new RelayCommand(SletBlomst);
+            SelectedOrdreBlomst = new OrdreBlomst();
         }
 
         public void AddBlomst()
@@ -38,6 +44,11 @@ namespace Blomsterbutik
             OrdreBlomst oBlomst = new OrdreBlomst(NavnBlomst, AntalBlomst, FarveBlomst);
 
             OC_Blomster.Add(oBlomst);
+        }
+
+        private void SletBlomst()
+        {
+            OC_Blomster.Remove(SelectedOrdreBlomst);
         }
     }
 }
