@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "K4qj1XDDswMTY2Qdltf/ItkwfjaWZztri+14h8WgWGOHq+TQoMlBDdyZFITW/fULfoTeXkGmrOajXGbKF2JYLg==",
+  "dgSpecHash": "ww/hBy3eetoTP/1r64GkU7zDVimUXE9b6AcAM0z/CVgq975+gIWl1rwFomSzdTsTbC8LweNW5re0ifedP9uiPw==",
   "success": true,
   "projectFilePath": "C:\\Code\\Blomsterbutik\\Blomsterbutik\\Blomsterbutik.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.universalwindowsplatform\\6.2.9\\microsoft.netcore.universalwindowsplatform.6.2.9.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\jakob\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform\\6.2.9\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.2.9.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm.microsoft.net.native.compiler\\2.2.7-rel-27913-00\\runtime.win10-arm.microsoft.net.native.compiler.2.2.7-rel-27913-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm.microsoft.net.native.sharedlibrary\\2.2.7-rel-27913-00\\runtime.win10-arm.microsoft.net.native.sharedlibrary.2.2.7-rel-27913-00.nupkg.sha512",

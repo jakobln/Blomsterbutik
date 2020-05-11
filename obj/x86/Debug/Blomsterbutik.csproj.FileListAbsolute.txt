@@ -43,3 +43,4 @@ C:\Code\Blomsterbutik\Blomsterbutik\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Code\Blomsterbutik\Blomsterbutik\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Code\Blomsterbutik\Blomsterbutik\obj\x86\Debug\ProjectArchitectures.txt
 C:\Code\Blomsterbutik\Blomsterbutik\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json
+C:\Code\Blomsterbutik\Blomsterbutik\bin\x86\Debug\Newtonsoft.Json.dll
