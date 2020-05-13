@@ -99,22 +99,32 @@ namespace Blomsterbutik
             SletSelectedBlomst.RaiseCanExecuteChanged();
         }
 
-        public void IndsætJson(string jsonText)
+        //public void IndsætJson(string jsonText)
+        //{
+        //    List<OrdreBlomst> nyListe = JsonConvert.DeserializeObject<List<OrdreBlomst>>(jsonText);
+        //    foreach (var blomst in nyListe)
+        //    {
+        //        this.OC_Blomster.Add(blomst);
+        //    }
+        //    SletSelectedBlomst.RaiseCanExecuteChanged();
+        //}
+
+        private async void HentDataFraDiskAsync()
         {
-            List<OrdreBlomst> nyListe = JsonConvert.DeserializeObject<List<OrdreBlomst>>(jsonText);
+            OC_Blomster.Clear();
+            List<OrdreBlomst> nyListe = new List<OrdreBlomst>();
+            nyListe = await PersistencyService.HentDataFraDiskAsyncPS();
+
             foreach (var blomst in nyListe)
             {
                 this.OC_Blomster.Add(blomst);
             }
             SletSelectedBlomst.RaiseCanExecuteChanged();
-        }
-
-        private async void HentDataFraDiskAsync()
-        {
-            StorageFile file = await localfolder.GetFileAsync(filnavn);
-            string jsonText = await FileIO.ReadTextAsync(file);
-            this.OC_Blomster.Clear();
-            IndsætJson(jsonText);
+            
+            //StorageFile file = await localfolder.GetFileAsync(filnavn);
+            //string jsonText = await FileIO.ReadTextAsync(file);
+            //this.OC_Blomster.Clear();
+            //IndsætJson(jsonText);
         }
 
         private void DanData()
