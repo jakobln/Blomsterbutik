@@ -31,15 +31,14 @@ namespace Blomsterbutik
 
         StorageFolder localfolder = null;
 
-        private readonly string filnavn = "blomster.json";
+        private readonly string filnavn = "blomster1.json";
 
         public OrdreBlomst SelectedOrdreBlomst { get; set; }
 
         public RelayCommand AddNyBlomst { get; set; }
-
         public RelayCommand SletSelectedBlomst { get; set; }
-
         public RelayCommand GemData { get; set; }
+        public RelayCommand HentData { get; set; }
 
         public BlomstViewModel()
         {
@@ -56,6 +55,8 @@ namespace Blomsterbutik
             localfolder = ApplicationData.Current.LocalFolder;
 
             GemData = new RelayCommand(GemDataTilDiskAsync);
+            HentData = new RelayCommand(HentDataFraDiskAsync);
+            DanData();
         }
 
         public void AddBlomst()
@@ -95,6 +96,34 @@ namespace Blomsterbutik
             this.jsonBlomster = GetJson();
             StorageFile file = await localfolder.CreateFileAsync(filnavn, CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(file, this.jsonBlomster);
+            SletSelectedBlomst.RaiseCanExecuteChanged();
+        }
+
+        public void IndsætJson(string jsonText)
+        {
+            List<OrdreBlomst> nyListe = JsonConvert.DeserializeObject<List<OrdreBlomst>>(jsonText);
+            foreach (var blomst in nyListe)
+            {
+                this.OC_Blomster.Add(blomst);
+            }
+            SletSelectedBlomst.RaiseCanExecuteChanged();
+        }
+
+        private async void HentDataFraDiskAsync()
+        {
+            StorageFile file = await localfolder.GetFileAsync(filnavn);
+            string jsonText = await FileIO.ReadTextAsync(file);
+            this.OC_Blomster.Clear();
+            IndsætJson(jsonText);
+        }
+
+        private void DanData()
+        {
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    var blomst = new OrdreBlomst("tulipan", i, "blå");
+            //    OC_Blomster.Add(blomst);
+            //}
         }
     }
 }
